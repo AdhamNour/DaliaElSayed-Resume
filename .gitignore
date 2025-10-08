@@ -1,0 +1,11 @@
+.vscode/*
+*.log
+*.fls
+tstex_modules/*
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.out
+*.bbl
+*aux
+*.pdf
