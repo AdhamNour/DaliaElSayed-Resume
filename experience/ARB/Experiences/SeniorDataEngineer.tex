@@ -11,13 +11,13 @@
     %     \item \textbf{Airflow-dbt Implementation:} Replaced rigid legacy mappings with \textbf{Apache Airflow} and \textbf{dbt} for 5+ critical workflows, enhancing version control and developer velocity.
     %     \item \textbf{High-Performance Analytics:} Integrated \textbf{Trino} as the primary query engine to facilitate low-latency interactive analytics over Iceberg tables for enterprise BI tools.
     % \end{itemize}
-    \item Leading the transition from legacy Informatica and Oracle DB silos to a decoupled \textbf{Medallion Architecture (Bronze/Silver/Gold)} to ensure high-quality, governed data delivery for financial analytics.
+    \item Leading the transition from legacy Informatica and Oracle DB silos to a \textbf{Medallion (Bronze/Silver/Gold) lakehouse architecture}, designing scalable ELT pipelines that power analytics, reporting, and \textbf{downstream data products} with clearly defined business metrics and \textbf{SLAs}.
     \item Designed a storage-compute decoupling strategy using \textbf{Apache Iceberg} and \textbf{OCI Object Storage (S3 Compatable Storage)} to reduce licensing overhead and enable independent scaling based on demand.
-    \item Implemented \textbf{Apache Airflow} and \textbf{dbt} for 5+ critical workflows, replacing rigid legacy mappings and increasing pipeline observability
+    \item Implemented \textbf{Apache Airflow and dbt} to build analytics-ready transformation layers, including \textbf{dimensional models (fact and dimension tables) and reusable metric definitions}, enabling self-serve \textbf{analytics for BI and product teams}.
     \begin{verse}
         \textbf{Business Impact} Projected a significant decrease in annual licensing and maintenance costs by moving from proprietary tools to an open lakehouse architecture, allowing the bank to handle increasing volumes without linear cost increases.
     \end{verse}
-    \item Integrated \textbf{Trino} as the primary query engine to facilitate low-latency interactive analytics over Iceberg tables for enterprise BI tools, improving report generation times by up to 70\%.
+    \item Integrated \textbf{Trino as a high-performance query engine} serving a \textbf{unified semantic layer} consumed by BI tools and analytics use cases, improving \textbf{dashboard reliability, consistency of metrics, and query performance} by up to 70\%.
     \begin{verse}
     \textbf{Business Impact} Created a cost-effective growth model by decoupling storage from compute, allowing the bank to handle increasing volumes without linear cost increases.
     \end{verse}
@@ -25,7 +25,7 @@
     \begin{verse}
     \textbf{Business Impact} Ensured regulatory compliance by delivering accurate and timely credit reports, avoiding potential fines and enhancing the bank's reputation with regulators.
     \end{verse}
-    \item Designed and deployed \textbf{real-time} data ingestion pipelines using \textbf{Apache Kafka, Kafka Connect, Kafka Streams and kSQL} to stream data from core banking, microservices and CRM systems into the data lake, defining data contracts and transformation logic to ensure data quality, scalability, and reliable downstream analytics.
+    \item Designed and deployed event-driven data pipelines using \textbf{Apache Kafka, Kafka Streams, and kSQL} to support \textbf{near real-time product and operational analytics}, enforcing \textbf{data contracts} and schema evolution for reliable downstream consumption.
     \item Developed \textbf{Python}-based automation tools to streamline \textbf{Informatica DEI} troubleshooting and schema reconciliation between \textbf{ERwin} models and physical databases, reducing manual validation and alignment effort by up to 60\% and improving platform reliability.
     \item Led System Integration Testing (SIT) and User Acceptance Testing (UAT) for critical data pipelines and BI reports, coordinating across engineering, QA, and business stakeholders to validate correctness, performance, and regulatory compliance. Implemented monitoring and structured feedback loops during testing phases, resolving 95\% of issues prior to production and ensuring stable post-deployment operations.
 
