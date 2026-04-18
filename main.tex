@@ -1,0 +1,105 @@
+%!TEX program = pdflatex
+\documentclass[10pt, letterpaper]{article}
+
+% ── Packages ──────────────────────────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=0.75in, top=0.65in, bottom=0.65in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{fontawesome5}
+
+% ── Colors ────────────────────────────────────────────────────────────────────
+\definecolor{teal}{HTML}{0F6E56}
+\definecolor{darktext}{HTML}{1A1A1A}
+\definecolor{graytext}{HTML}{555555}
+\definecolor{lightgray}{HTML}{888888}
+\definecolor{rulecol}{HTML}{1D9E75}
+\definecolor{linkblue}{HTML}{0563C1}
+
+% ── Hyperlinks ────────────────────────────────────────────────────────────────
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkblue,
+  linkcolor=linkblue,
+  pdftitle={Adham Nour El-Waffaa — Senior Data Engineer},
+  pdfauthor={Adham Nour El-Waffaa}
+}
+
+% ── Typography ────────────────────────────────────────────────────────────────
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ── Section headings ──────────────────────────────────────────────────────────
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries\color{teal}}
+  {}{0em}{}
+  [\vspace{2pt}\textcolor{rulecol}{\titlerule[0.8pt]}\vspace{4pt}]
+\titlespacing{\section}{0pt}{10pt}{4pt}
+
+% ── Bullet lists ──────────────────────────────────────────────────────────────
+\setlist[itemize]{
+  leftmargin=1.2em,
+  topsep=2pt,
+  itemsep=2pt,
+  parsep=0pt,
+  beginpenalty=10000,
+  label=\textcolor{teal}{\textbullet}
+}
+\setlist[itemize,2]{
+  leftmargin=1.8em,
+  topsep=1pt,
+  itemsep=1pt,
+  label=\textcolor{lightgray}{$\circ$}
+}
+
+% ── Custom commands ───────────────────────────────────────────────────────────
+\newcommand{\jobtitle}[4]{%
+  \vspace{7pt}\nopagebreak
+  {\textbf{\textcolor{darktext}{#1}}%
+  \textcolor{lightgray}{\ —\ }%
+  \textbf{\textcolor{teal}{#2}}}%
+  \hfill%
+  {\small\textit{\textcolor{lightgray}{#3\ ·\ #4}}}\par\nopagebreak\vspace{-2pt}\nopagebreak
+}
+
+\newcommand{\companydesc}[1]{%
+  \nopagebreak{\small\textit{\textcolor{graytext}{#1}}}\par\nopagebreak\vspace{3pt}\nopagebreak
+}
+
+\newcommand{\skillrow}[2]{%
+  \vspace{2pt}%
+  {\small\textbf{\textcolor{darktext}{#1:}}\enspace\textcolor{graytext}{#2}}\\%
+}
+
+\newcommand{\certitem}[3]{%
+  \item \textbf{\textcolor{darktext}{#1}}%
+  \textcolor{graytext}{\ —\ #2}%
+  \textcolor{lightgray}{\ ·\ \textit{#3}}%
+}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\begin{document}
+% ══════════════════════════════════════════════════════════════════════════════
+
+\input{sections/header}
+\input{sections/summary}
+\input{sections/highlights}
+
+\section{Experience}
+\input{experience/01_arb}
+\input{experience/02_cae_senior}
+\input{experience/03_banque_misr}
+\input{experience/04_cae_junior}
+
+\input{sections/skills}
+% \input{sections/opensource}
+\input{sections/certifications}
+\input{sections/education}
+
+\end{document}
